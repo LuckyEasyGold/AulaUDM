@@ -1,9 +1,48 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
-  <diagram name="Página-1" id="JHsbYuOX7SLT1PhYxxCL">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2026-03-25T00:00:00.000Z" agent="Gemini" version="21.6.6">
+  <diagram name="Caso de Uso - Cinema" id="cinema-01">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="box" value="Sistema de Controle de Cinema" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fillColor=none;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="220" y="40" width="380" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-admin" value="Gerente / Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-func" value="Funcionário" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_sala" value="Cadastrar Sala" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="70" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_filme" value="Cadastrar Filme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="160" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_sessao" value="Gerenciar Sessões" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_venda" value="Vender Ingresso" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_disp" value="Consultar Disponibilidade da Sessão" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="550" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor-admin" target="uc_sala" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor-admin" target="uc_filme" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor-admin" target="uc_sessao" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor-func" target="uc_venda" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" source="uc_venda" target="uc_disp" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
